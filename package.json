@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "boot camp express.js homework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejstraband/friendFinder.git"
+  },
+  "keywords": [
+    "express.js"
+  ],
+  "author": "Eric Traband",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejstraband/friendFinder/issues"
+  },
+  "homepage": "https://github.com/ejstraband/friendFinder#readme"
+}
