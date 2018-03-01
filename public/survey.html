@@ -1,11 +1,116 @@
 <html>
     <header>
+        <title>Friend Finder, I reckon</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     </header>
 
     <body>
         <h1>Survey</h1>
-
         <h2><a href="home">Home</a></h2>
+
+        <section id="survey">
+
+            <form action="/api/newFriend" method="post">
+                <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                        </div>
+                        <div class="col">
+                                <input type="text" class="form-control" name="photo" id="photoLink" placeholder="Link to Image">
+                        </div>
+                </div>
+                <div class="scores">
+                <h3>Mal and Zoe were once lovers?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a1" value="1">
+                    <label class="form-check-label" for="q1">
+                        Option 1: No Way. Nothing about Mal ever "bothered her."
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a2" value="2">
+                    <label class="form-check-label" for="q1">
+                        Option 2
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a3" value="3">
+                    <label class="form-check-label" for="q1">
+                        Option 3
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a4" value="4">
+                    <label class="form-check-label" for="q1">
+                        Option 4
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a5" value="5">
+                    <label class="form-check-label" for="q1">
+                        Option 5: Totally happened. Grizwalds are a turn-on.
+                    </label>
+                </div>
+
+                <h3>Kaylee and Simon will have beautiful and brilliant children</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a1" value="1">
+                    <label class="form-check-label" for="q2">
+                        Option 1: Nope. Recessive genes are a bummer
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a2" value="2">
+                    <label class="form-check-label" for="q2">
+                        Option 2
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a3" value="3">
+                    <label class="form-check-label" for="q2">
+                        Option 3
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a4" value="4">
+                    <label class="form-check-label" for="q2">
+                        Option 4
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a5" value="5">
+                    <label class="form-check-label" for="q2">
+                        Option 5: Of course. Here come the AI enhanced cyborgs of doom at the hands of these superkids
+                    </label>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="newFriendSubmission">Submit</button>
+                </form>
+        </section>
+
+        <script type="text/javascript">
+            // submit entries to the API for new Friends
+            $("#newFriendSubmission").on("click", function(event) {
+              event.preventDefault();
+              var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photoLink").val().trim(),
+                scores: [$("#q1").val(value).trim(), $("#q2").val(value).trim()]
+              };
+        
+              // Question: What does this code do??
+              $.post("/api/newFriend", newFriend)
+              .then(function(data) {
+                console.log(data);
+                alert("Adding friend...");
+              });
+            });
+          </script>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

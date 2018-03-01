@@ -1,4 +1,4 @@
-var friendsTable = [
+var friends = [
 
 {
 "name":"Good",
@@ -31,9 +31,25 @@ var friendsTable = [
 2,
 1
 ]
+},
+{
+"name":"Middle",
+"photo":"https://images-na.ssl-images-amazon.com/images/I/41jH7ektQiL.jpg",
+"scores":[
+3,
+3,
+2,
+2,
+4,
+4,
+3,
+3,
+4,
+2
+]
 }
 ]
 
-module.exports = friendsTable;
+module.exports = friends;
 
 // {"name":"Bad","photo":"https://images-na.ssl-images-amazon.com/images/I/41jH7ektQiL.jpg","scores":[3,3,3,3,3,3,3,3,3,1]}
