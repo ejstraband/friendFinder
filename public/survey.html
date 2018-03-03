@@ -9,108 +9,186 @@
         <h1>Survey</h1>
         <h2><a href="home">Home</a></h2>
 
-        <section id="survey">
+    <section id="survey">
+        <form action="/api/newFriend" method="post">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="name">
+                <label>Photo</label>
+                <input type="text" class="form-control" name="photo" id="photo" placeholder="link to photo">
+            </div>
+            <div class="scores">
+                <div class="form-group">
+                    <label>Question 1</label>
+                    <select class="form-control" name="q1" id="q1">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 2</label>
+                    <select class="form-control" name="q2" id="q2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 3</label>
+                    <select class="form-control" name="q3" id="q3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 4</label>
+                    <select class="form-control" name="q4" id="q4">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 5</label>
+                    <select class="form-control" name="q5" id="q5">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 6</label>
+                    <select class="form-control" name="q6" id="q6">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 7</label>
+                    <select class="form-control" name="q7" id="q7">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 8</label>
+                    <select class="form-control" name="q8" id="q8">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 9</label>
+                    <select class="form-control" name="q9" id="q9">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for=>Question 10</label>
+                    <select class="form-control" name="q10" id="q10">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    </select>
+                </div>
+            </div>
 
-            <form action="/api/newFriend" method="post">
-                <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                        </div>
-                        <div class="col">
-                                <input type="text" class="form-control" name="photo" id="photoLink" placeholder="Link to Image">
-                        </div>
-                </div>
-                <div class="scores">
-                <h3>Mal and Zoe were once lovers?</h3>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1a1" value="1">
-                    <label class="form-check-label" for="q1">
-                        Option 1: No Way. Nothing about Mal ever "bothered her."
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1a2" value="2">
-                    <label class="form-check-label" for="q1">
-                        Option 2
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1a3" value="3">
-                    <label class="form-check-label" for="q1">
-                        Option 3
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1a4" value="4">
-                    <label class="form-check-label" for="q1">
-                        Option 4
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1a5" value="5">
-                    <label class="form-check-label" for="q1">
-                        Option 5: Totally happened. Grizwalds are a turn-on.
-                    </label>
-                </div>
+            <button type="submit" class="btn btn-primary" 
+            id="newFriendSubmission">Submit</button>
+        </form>
+    </section>
 
-                <h3>Kaylee and Simon will have beautiful and brilliant children</h3>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2a1" value="1">
-                    <label class="form-check-label" for="q2">
-                        Option 1: Nope. Recessive genes are a bummer
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2a2" value="2">
-                    <label class="form-check-label" for="q2">
-                        Option 2
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2a3" value="3">
-                    <label class="form-check-label" for="q2">
-                        Option 3
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2a4" value="4">
-                    <label class="form-check-label" for="q2">
-                        Option 4
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2a5" value="5">
-                    <label class="form-check-label" for="q2">
-                        Option 5: Of course. Here come the AI enhanced cyborgs of doom at the hands of these superkids
-                    </label>
-                    </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="newFriendSubmission">Submit</button>
-                </form>
-        </section>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
         <script type="text/javascript">
+
+            $.ajaxSettings.traditional = true;
             // submit entries to the API for new Friends
+            
+            function queryFriends() {
+                var currentURL = window.location.origin;
+                var allFriends;
+                $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+                    .then(function(friends) {
+                    console.log(friends);
+                    var previousFriends = friends.length-1;
+                    console.log("current friend count " + previousFriends);
+                    for (var i = 0; i < friends.length-1; i++) {
+                        console.log(friends[i].scores);
+                        for (var j = 0; j < friends[i].scores.length; j++) {
+                            console.log(friends[i].scores[j]);
+                        }
+                    }
+                })
+            }
+
+
+
+
             $("#newFriendSubmission").on("click", function(event) {
               event.preventDefault();
               var newFriend = {
                 name: $("#name").val().trim(),
-                photo: $("#photoLink").val().trim(),
-                scores: [$("#q1").val(value).trim(), $("#q2").val(value).trim()]
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
               };
+              console.log(newFriend);
         
-              // Question: What does this code do??
               $.post("/api/newFriend", newFriend)
               .then(function(data) {
-                console.log(data);
+                // console.log(newFriend);
+                console.log(data.scores)
+                // console.log(data);
                 alert("Adding friend...");
+                queryFriends();
               });
             });
+
+
           </script>
-
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
